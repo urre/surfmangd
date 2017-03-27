@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Mono', monospace;
+  font-size: 125%;
+}
+
+h1 {
+	font-size: 2rem;
+	line-height: 2;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 2;
+}
+
+.rangeslider-horizontal {
+    height: 4px;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+.rangeslider-horizontal .rangeslider__fill {
+    height: 100%;
+    background-color: #7BD47E;
+    border-radius: 10px;
+    top: 0;
+    box-shadow: none;
+}
+
+.rangeslider-horizontal .rangeslider__handle {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    top: -20px;
+    box-shadow: none;
+    border: none;
+    background-color: #EBC523;
+    transition: all 200ms cubic-bezier(.05,-.05,.05, 1.25);
+}
+
+.rangeslider-horizontal .rangeslider__handle:focus {
+	transform: scale(.95);
+}
+
+.rangeslider-horizontal .rangeslider__handle:after {
+	display: none;
+}
+
+.rangeslider-horizontal .rangeslider__tooltip {
+	width: 80px;
+	background-color: #7BD47E;
+}
+
+.rangeslider-horizontal .rangeslider__tooltip:after {
+	border-top-color: #7BD47E;
+}
+
+.rangeslider-horizontal .rangeslider__label {
+	line-height: 2;
+	margin-top: 1rem;
+}
+
+.rangeslider-horizontal .rangeslider__label[data-value="100"] {
+	margin-left: -3rem;
+}
+
+.value {
+	font-size: 12rem;
+	font-weight: 700;
+	color: #7BD47E;
+	margin-top: 4rem;
+}
+
+.value:after {
+	content: ' GB';
+	font-weight: normal;
+	font-size: 3rem;
+	color: #333;
+}
+
+.amount {
+	font-size: 4rem;
+	font-weight: 700;
+	color: #7BD47E;
+}
+
+.amount:after {
+	content: ' timmar/dag';
+	font-weight: normal;
+	font-size: 1rem;
+	color: #333;
+}
