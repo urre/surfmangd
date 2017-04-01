@@ -1,18 +1,53 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'SF Mono', monospace;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;  
   font-size: 125%;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+p {
+	font-size: .75rem;
+	color: #999;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+	p {
+		font-size: 1rem;
+	}
 }
 
 h1 {
-	font-size: 2rem;
-	line-height: 2;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 40em) {
+	h1 {
+		font-size: 2.25rem;
+	}
 }
 
 h2 {
-	font-size: 2rem;
-	line-height: 2;
+	font-size: 1.25rem;
+}
+
+@media (min-width: 40em) {
+	h2 {
+		font-size: 2rem;
+	}
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+@media (min-width: 40em) {
+	h3 {
+		font-size: 1.35rem;
+	}
 }
 
 .rangeslider-horizontal {
@@ -30,14 +65,15 @@ h2 {
 }
 
 .rangeslider-horizontal .rangeslider__handle {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    top: -20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    top: -15px;
     box-shadow: none;
     border: none;
-    background-color: #EBC523;
+    background-color: #7BD47E;
     transition: all 200ms cubic-bezier(.05,-.05,.05, 1.25);
+    z-index: 100;
 }
 
 .rangeslider-horizontal .rangeslider__handle:focus {
@@ -60,17 +96,67 @@ h2 {
 .rangeslider-horizontal .rangeslider__label {
 	line-height: 2;
 	margin-top: 1rem;
+	display: none;
+	box-sizing: border-box;
+	font-family: inherit;
+	font-size: .65rem;
+	font-weight: 600;
+	line-height: 1;
+	text-decoration: none;
+	padding: .2rem .35rem;
+	cursor: pointer;
+	border: 0px;
+	color: rgb(255, 255, 255);
+	background-color: transparent;
+	border: 2px solid #7BD47E;
+	color:  #7BD47E;
+	border-radius: 99999px;
+}
+
+.rangeslider-horizontal .rangeslider__label:after {
+	content: '';
+	background-color: #7BD47E;
+	width: 2px;
+	height: 28px;
+	position: absolute;
+	top: -28px;
+	right: 50%;
+	z-index: -1;
+}
+
+@media (min-width: 60em) {
+	.rangeslider-horizontal .rangeslider__label {
+		display: inline-block;
+		margin-left: -.5rem;
+	}
 }
 
 .rangeslider-horizontal .rangeslider__label[data-value="100"] {
-	margin-left: -3rem;
+	margin-left: -.7rem;
+	width: 55px;
+}
+
+.rangeslider-horizontal .rangeslider__label[data-value="2"] {
+	margin-left: -.3rem;
+}
+
+.rangeslider-horizontal .rangeslider__label[data-value="5"] {
+	margin-left: -.35rem;
 }
 
 .value {
-	font-size: 12rem;
+	font-size: 3rem;
 	font-weight: 700;
 	color: #7BD47E;
-	margin-top: 4rem;
+	font-family: 'SF Mono', 'Menlo-Bold', monospace;
+	text-align: center;
+}
+
+@media (min-width: 80em) {
+	.value {
+		font-size: 8rem;
+		text-align: right;
+	}
 }
 
 .value:after {
@@ -81,14 +167,54 @@ h2 {
 }
 
 .amount {
-	font-size: 4rem;
+	line-height: 2;
+	font-size: 1rem;
 	font-weight: 700;
 	color: #7BD47E;
+	font-family: 'SF Mono', Menlo, monospace;
 }
 
 .amount:after {
-	content: ' timmar/dag';
-	font-weight: normal;
-	font-size: 1rem;
-	color: #333;
+	content: ' Varje dag/mån';
+	display: block;
+	font-size: .75rem;
+}
+
+.amount-music {
+	color: #1493BC;
+}
+
+.amount-video {
+	color: #F18B00;
+}
+
+.amount-surf {
+	color: #57B04A;
+}
+
+@media (min-width: 40em) {
+	.amount {
+		font-size: 1.25rem;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.logo {
+	max-height: 50px;
+	margin: 0 auto;
+}
+
+.sliderSection {
+	background-color: rgba(235, 197, 35, 0.075);
+}
+
+.affiliatesSection {
+	background-color: rgba(123, 212, 126, 0.1);
+}
+
+.footer a {
+	color: #7BD47E;
 }

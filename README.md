@@ -1,3 +1,11 @@
-# Surfmängd.se
+# Surfmangd.se
 
-Wip
+Data plan usage comparison.
+
+## Run
+
+    yarn start
+
+## Build
+
+    yarn build

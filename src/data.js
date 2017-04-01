@@ -1,39 +1,46 @@
 export default {
 	data: {
+		'GB0' : {
+			'gb' : 0,
+			'music': 0,
+			'video': 0,
+			'surf': 0
+		},
 		'GB1' : {
-			'gb' : 5,
-			'music': 15,
-			'video': 7,
-			'hd': 2,
-			'surf': 50
-		},
-		'GB2' : {
-			'gb' : 10,
-			'music': 45,
-			'video': 80,
-			'hd': 40,
-			'surf': 500
-		},
-		'GB3' : {
-			'gb' : 20,
-			'music': 25,
-			'video': 70,
-			'hd': 20,
-			'surf': 500
-		},
-		'GB4' : {
-			'gb' : 50,
-			'music': 225,
-			'video': 170,
-			'hd': 220,
-			'surf': 5200
+			'gb' : 1,
+			'music': 30,
+			'video': 5,
+			'surf': 30
 		},
 		'GB5' : {
+			'gb' : 5,
+			'music': 30,
+			'video': 5,
+			'surf': 30
+		},
+		'GB10' : {
+			'gb' : 10,
+			'music': 60,
+			'video': 15,
+			'surf': 40
+		},
+		'GB20' : {
+			'gb' : 20,
+			'music': 120,
+			'video': 30,
+			'surf': 50
+		},
+		'GB50' : {
+			'gb' : 50,
+			'music': 30,
+			'video': 50,
+			'surf': 75
+		},
+		'GB100' : {
 			'gb' : 100,
-			'music': 1225,
-			'video': 2170,
-			'hd': 2209,
-			'surf': 5200
+			'music': 1000,
+			'video': 100,
+			'surf': 150
 		}
 	}
 }

@@ -4,11 +4,14 @@ import { Flex, Box } from 'reflexbox'
 import Slider from 'react-rangeslider'
 import { Link, browserHistory } from 'react-router'
 
+// eslint-disable-next-line
 import appreset from '../../node_modules/app-reset/app-reset.css'
 import 'react-rangeslider/lib/index.css'
 import '../Styles.css'
 
 import Media from './Media'
+import Affiliates from './Affiliates'
+import Footer from './Footer'
 
 class Home extends Component {
 
@@ -66,43 +69,53 @@ class Home extends Component {
     const formatgb = value => value + ' gb'
 
     const horizontalLabels = {
-        5: 'Snålt',
-        10: 'Lite',
-        20: 'Ganska mycket',
-        50: 'Mycket',
-        100: 'Supermycket'
+        2: '2 GB',
+        5: '5 GB',
+        10: '10 GB',
+        20: '20 GB',
+        50: '50 GB',
+        100: '100 GB'
       }
 
     return (
 
-      <Flex p={ 4 } align='center' justify="center" wrap>
+      <Flex align='center' justify='space-between' wrap p={2}>
 
-        <Box col={ 12 } lg={ 12 } sm={ 6 }>
-          <h1><Link to="/">Surfmängd</Link></h1>
-          <p>
-            Vad räcker min data till?
-          </p>
+        <Box col={ 12 } lg={ 6 } sm={ 12 } p={ 3 }>
+          <h1>
+            <Link to="/">Surfmängd</Link>
+          </h1>
+          <p>Vad räcker min data till varje dag i en hel månad? *</p>
         </Box>
-        <Box col={ 12 } lg={ 12 } sm={ 6 } py={ 4 }>
+
+        <Box className='value' col={ 12 } lg={ 6 } sm={ 12 } p={ 3 }>
+          { surfmangd }
+        </Box>
+
+        <Box className='sliderSection' col={ 12 } lg={ 12 } sm={ 12 } py={ 3 } px={2}>
+
+        <h3>Justera surfmängd</h3>
         
-        <Slider
-          min={0}
-          max={100}
-          step={5}
-          format={formatgb}
-          value={ surfmangd }
-          labels={horizontalLabels}
-          orientation="horizontal"
-          onChange={this.handleOnChange}
-          onChangeComplete={this.handleOnComplete}
-        />
-          <Box className='value' col={ 12 } py={ 2 }>
-            { surfmangd }
-          </Box>
-        
+          <Slider
+            min={0}
+            max={100}
+            step={1}
+            format={formatgb}
+            value={ surfmangd }
+            labels={horizontalLabels}
+            orientation="horizontal"
+            onChange={this.handleOnChange}
+            onChangeComplete={this.handleOnComplete}
+          />
+
           <Media gb={this.props.params.id} />
-
         </Box>
+        
+        <Box col={ 12 }>
+          <Affiliates />
+        </Box>
+
+        <Footer />
 
       </Flex>
 

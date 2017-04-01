@@ -1,72 +1,51 @@
 import React, { Component } from 'react'
-import { render } from 'react-dom'
-import { browserHistory } from 'react-router'
 import { Flex, Box } from 'reflexbox'
-import data from '../data'
-import _ from 'lodash'
+import humanizeDuration from 'humanize-duration'
 
 class Media extends Component {
 
-	constructor(props, context) {
-	  super(props, context)
-	  this.state = {
-	  		data: ''
-	  	}
-	}
-
-	componentWillMount () {
-	  this.setState({
-	    data: data
-	  })
-	}
-
 	renderInfo(kind) {
 
-		let current = this.props.gb ? parseInt(this.props.gb): 0
+		let current = this.props.gb ? parseInt(this.props.gb, 10): 0
 		let amount = '';
-		let obj = this.state.data.data
 
-	 	// var filtered = _.find(obj, {gb:current})
-
-	 	var filtered = _.find(obj, function(o) { return o.gb >= current });
-	 	
-	 	if(filtered) {
 	 	switch (kind) {
 	 		case 'music':
-	 			amount = filtered.music
+	 			amount = humanizeDuration(current * 6 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 			break;
 	 		case 'video':
-	 			amount = filtered.video
+	 			amount = humanizeDuration(current * 1.5 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 			break;
 	 		case 'surf':
-	 			amount = filtered.surf
+	 			amount = humanizeDuration(current * 2.25 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 			break;
+	 		default:
+	 			amount = humanizeDuration(current * 6 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 	}
 	 	return (
 	 		amount
 	 	)
-	 }
 	
 	}
 
   render() {
 
     return (
-		<Flex align='center' justify="center" wrap>
-	    	<Box col={ 12 } lg={ 4 } sm={ 6 } p={ 2 }>
-	    		<h2>Musik</h2>
-	    		<p>Streama Spotify</p>
-	    		<p className='amount'>{this.renderInfo('music')}</p>
+		<Flex align='center' justify='space-between' wrap mt={6}>
+	    	<Box col={ 12 } md={6} lg={ 4 } sm={ 12 } p={ 2 }>
+	    		<h2>Lyssna på musik</h2>
+	    		<p>Exempelvis Spotify, Apple Music, Soundcloud</p>
+	    		<p className='amount amount-music'>{this.renderInfo('music')}</p>
 	    	</Box>
 	    	<Box col={ 12 } lg={ 4 } sm={ 6 } p={ 2 }>
-	    		<h2>YouTube, SVT Play</h2>
-	    		<p>Titta på video</p>
-	    		<p className='amount'>{this.renderInfo('video')}</p>
+	    		<h2>Titta på video</h2>
+	    		<p>Exempelvis YouTube, SVT Play, Netflix</p>
+	    		<p className='amount amount-video'>{this.renderInfo('video')}</p>
 	    	</Box>
 	    	<Box col={ 12 } lg={ 4 } sm={ 6 } p={ 2 }>
-	    		<h2>Surf</h2>
-	    		<p>Surfa och maila</p>
-	    		<p className='amount'>{this.renderInfo('surf')}</p>
+	    		<h2>Surfa</h2>
+	    		<p>Webbsidor, Instagram, Facebook, e-post osv</p>
+	    		<p className='amount amount-surf'>{this.renderInfo('surf')}</p>
 	    	</Box>
 		</Flex>
     	
