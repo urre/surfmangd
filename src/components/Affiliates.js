@@ -14,7 +14,7 @@ class Affiliates extends Component {
 				<h3>Populäraste abonnemangen</h3>
 			</Box>
 
-			<Affiliate name='Vimla' imageurl='https://res.cloudinary.com/urre/image/upload/v1490959449/vimla_f7hrlu.png' description='Mobilabonnemang med fastpris utan bindningstid' url='http://vimla.se' />
+			<Affiliate name='Vimla' imageurl='https://res.cloudinary.com/urre/image/upload/v1490959449/vimla_f7hrlu.png' description='Mobilabonnemang med fastpris utan bindningstid' url='https://track.adtraction.com/t/t?a=1081333617&as=1177346381&t=2&tk=1' />
 			<Affiliate name='Fello' imageurl='https://res.cloudinary.com/urre/image/upload/v1490959448/fello_kaztsd.png' description='Mobilabonnemang med sunt förnuft och schyssta villkor' url='https://www.fello.se/' />
 			<Affiliate name='Halebop' imageurl='https://res.cloudinary.com/urre/image/upload/v1490959448/halebop_q3m39t.png' description='Den schyssta mobiloperatören' url='https://shop.halebop.se/mobilabonnemang' />
 			<Affiliate name='Hallon' imageurl='https://res.cloudinary.com/urre/image/upload/v1490959449/hallon_asrw1k.png' description='Mobilabonnemang från din nya mobiloperatör' url='https://www.hallon.se/' />
