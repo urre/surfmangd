@@ -1,4 +1,4 @@
-# Surfmangd.se
+# [Surfmängd](https://surfmangd.se/data/5)
 
 A fuzzy Mobile Data Plan Usage Calculator. Drag the slider and get the estimated hours/minutes you can browse the web, use social media, use video and music streaming services for a specific data plan limit.
 
