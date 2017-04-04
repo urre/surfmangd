@@ -25,7 +25,7 @@ class Media extends Component {
 	 	return (
 	 		amount
 	 	)
-	
+
 	}
 
   render() {
@@ -48,7 +48,7 @@ class Media extends Component {
 	    		<p className='amount amount-surf'>{this.renderInfo('surf')}</p>
 	    	</Box>
 		</Flex>
-    	
+
     )
   }
 }

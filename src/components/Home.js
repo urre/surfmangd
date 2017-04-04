@@ -35,7 +35,7 @@ class Home extends Component {
       this.setState({
         surfmangd: 5}, () => {
           this.updateUrl()
-      }) 
+      })
      }
     })
   }
@@ -44,7 +44,7 @@ class Home extends Component {
     this.setState({
       surfmangd: parseInt( this.props.params.id ? this.props.params.id : 5, 10 )}, () => {
         this.updateUrl()
-    })   
+    })
   }
 
   updateUrl() {
@@ -95,7 +95,7 @@ class Home extends Component {
         <Box className='sliderSection' col={ 12 } lg={ 12 } sm={ 12 } py={ 3 } px={2}>
 
         <h3>Justera surfmängd</h3>
-        
+
           <Slider
             min={0}
             max={100}
@@ -110,7 +110,7 @@ class Home extends Component {
 
           <Media gb={this.props.params.id} />
         </Box>
-        
+
         <Box col={ 12 }>
           <Affiliates />
         </Box>
