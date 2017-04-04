@@ -218,3 +218,9 @@ h3 {
 .footer a {
 	color: #7BD47E;
 }
+
+.footer p {
+	max-width: 50em;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+}

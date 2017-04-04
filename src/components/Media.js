@@ -11,13 +11,13 @@ class Media extends Component {
 
 	 	switch (kind) {
 	 		case 'music':
-	 			amount = humanizeDuration(current * 6 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
+	 			amount = humanizeDuration(current * 7.5 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 			break;
 	 		case 'video':
-	 			amount = humanizeDuration(current * 1.5 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
+	 			amount = humanizeDuration(current * 1.75 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 			break;
 	 		case 'surf':
-	 			amount = humanizeDuration(current * 2.25 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
+	 			amount = humanizeDuration(current * 3 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
 	 			break;
 	 		default:
 	 			amount = humanizeDuration(current * 6 * (60*1000), { language: 'sv', round: true, units: ['h', 'm'] })
