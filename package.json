@@ -23,6 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "cd build && cp index.html 200.html && surge . surfmangd.se"
+    "deploy": "cd build && cp index.html 200.html && surge . surfmangd.se",
+    "release": "npm run build && npm run deploy"
   }
 }
