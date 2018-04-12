@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;  
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
   font-size: 125%;
   line-height: 1.5;
   overflow-x: hidden;
@@ -51,7 +51,6 @@ h3 {
 }
 
 .rangeslider-horizontal {
-    height: 4px;
     border-radius: 2px;
     box-shadow: none;
 }
@@ -68,7 +67,6 @@ h3 {
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    top: -15px;
     box-shadow: none;
     border: none;
     background-color: #7BD47E;
@@ -76,9 +74,6 @@ h3 {
     z-index: 100;
 }
 
-.rangeslider-horizontal .rangeslider__handle:focus {
-	transform: scale(.95);
-}
 
 .rangeslider-horizontal .rangeslider__handle:after {
 	display: none;
@@ -93,7 +88,12 @@ h3 {
 	border-top-color: #7BD47E;
 }
 
-.rangeslider-horizontal .rangeslider__label {
+.rangeslider__labels {
+	top: -20px;
+	left: 6px;
+}
+
+.rangeslider-horizontal .rangeslider__label-item {
 	line-height: 2;
 	margin-top: 1rem;
 	display: none;
@@ -113,7 +113,12 @@ h3 {
 	border-radius: 99999px;
 }
 
-.rangeslider-horizontal .rangeslider__label:after {
+.rangeslider-horizontal .rangeslider__label-item:hover {
+	color: white;
+	background-color: #7BD47E;
+}
+
+.rangeslider-horizontal .rangeslider__label-item:after {
 	content: '';
 	background-color: #7BD47E;
 	width: 2px;
@@ -125,22 +130,22 @@ h3 {
 }
 
 @media (min-width: 60em) {
-	.rangeslider-horizontal .rangeslider__label {
+	.rangeslider-horizontal .rangeslider__label-item {
 		display: inline-block;
 		margin-left: -.5rem;
 	}
 }
 
-.rangeslider-horizontal .rangeslider__label[data-value="100"] {
+.rangeslider-horizontal .rangeslider__label-item[data-value="100"] {
 	margin-left: -.7rem;
 	width: 55px;
 }
 
-.rangeslider-horizontal .rangeslider__label[data-value="2"] {
+.rangeslider-horizontal .rangeslider__label-item[data-value="2"] {
 	margin-left: -.3rem;
 }
 
-.rangeslider-horizontal .rangeslider__label[data-value="5"] {
+.rangeslider-horizontal .rangeslider__label-item[data-value="5"] {
 	margin-left: -.35rem;
 }
 

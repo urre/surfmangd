@@ -1,7 +1,8 @@
 {
   "name": "surfmangd",
   "version": "0.1.0",
-  "private": true,
+  "author": "Urban Sanden",
+  "license": "MIT",
   "devDependencies": {
     "lodash": "^4.17.4",
     "react-router": "^3.0.2",
