@@ -13,6 +13,7 @@
     "humanize-duration": "^3.10.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-ga": "^2.4.1",
     "react-icons": "^2.2.3",
     "react-rangeslider": "^2.0.1",
     "rebass": "^0.3.4",

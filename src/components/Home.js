@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-
 import { Flex, Box } from 'reflexbox'
 import Slider from 'react-rangeslider'
 import { Link, browserHistory } from 'react-router'
+
+import ReactGA from 'react-ga'
 
 // eslint-disable-next-line
 import appreset from '../../node_modules/app-reset/app-reset.css'
@@ -52,6 +53,17 @@ class Home extends Component {
   }
 
   handleOnComplete = (value) => {
+
+    setTimeout(() => {
+
+      ReactGA.event({
+        category: 'Data usage',
+        action: 'Selected an data usage level',
+        label: 'Gigabyte per month',
+        value: parseInt(this.props.params.id, 10)
+      })
+    }, 1000)
+
     this.updateUrl()
   }
 

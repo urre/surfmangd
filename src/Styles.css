@@ -53,6 +53,7 @@ h3 {
 .rangeslider-horizontal {
     border-radius: 2px;
     box-shadow: none;
+		height: 6px;
 }
 
 .rangeslider-horizontal .rangeslider__fill {
@@ -88,22 +89,22 @@ h3 {
 	display: none;
 }
 
-.rangeslider .rangeslider__handle-tooltip {
+.rangeslider .rangeslider__tooltip {
 	width: 100px;
 	background-color: blueviolet;
 }
 
-.rangeslider .rangeslider__handle-tooltip:after {
+.rangeslider .rangeslider__tooltip:after {
 		border-top-color: blueviolet;
 }
 
 
-.rangeslider__labels {
+.rangeslider__label-list {
 	top: -20px;
 	left: 6px;
 }
 
-.rangeslider-horizontal .rangeslider__label-item {
+.rangeslider__label-list .rangeslider__label {
 	line-height: 2;
 	margin-top: 1rem;
 	display: none;
@@ -123,12 +124,12 @@ h3 {
 	border-radius: 99999px;
 }
 
-.rangeslider-horizontal .rangeslider__label-item:hover {
+.rangeslider__label:hover {
 	color: white;
 	background-color: #7BD47E;
 }
 
-.rangeslider-horizontal .rangeslider__label-item:after {
+.rangeslider__label:after {
 	content: '';
 	background-color: #7BD47E;
 	width: 2px;
@@ -140,14 +141,14 @@ h3 {
 }
 
 @media (min-width: 60em) {
-	.rangeslider-horizontal .rangeslider__label-item {
+	.rangeslider__label-list .rangeslider__label {
 		display: inline-block;
 		margin-left: -.5rem;
 	}
 }
 
-.rangeslider-horizontal .rangeslider__label-item[data-value="100"] {
-	margin-left: -.7rem;
+/* .rangeslider-horizontal .rangeslider__label-item[data-value="100"] { */
+	/* margin-left: -.7rem;
 	width: 55px;
 }
 
@@ -157,7 +158,7 @@ h3 {
 
 .rangeslider-horizontal .rangeslider__label-item[data-value="5"] {
 	margin-left: -.35rem;
-}
+} */
 
 .value {
 	font-size: 3rem;
@@ -190,13 +191,6 @@ h3 {
 }
 
 
-.amount:after {
-	content: ' Varje dag/mån';
-	display: block;
-	font-size: .75rem;
-}
-
-
 .amount-music {
 	color: #1493BC;
 }
@@ -207,6 +201,11 @@ h3 {
 
 .amount-surf {
 	color: #57B04A;
+}
+
+.amount small {
+	display: block;
+	font-size: .65em;
 }
 
 @media (min-width: 40em) {
