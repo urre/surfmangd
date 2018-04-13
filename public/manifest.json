@@ -1,0 +1,12 @@
+{
+  "name": "Surfmängd",
+  "lang": "sv-SE",
+  "start_url": "https://surfmangd.se",
+  "display": "standalone",
+  "theme_color": "#7bd47e",
+  "icons": [
+    {
+      "src": "favicon-touch.png"
+    }
+  ]
+}
