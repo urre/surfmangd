@@ -74,19 +74,29 @@ h3 {
     z-index: 100;
 }
 
+.rangeslider-horizontal .rangeslider__handle:focus {
+	outline: none;
+}
+
+.rangeslider-horizontal .rangeslider__handle:active {
+	outline: none;
+	background-color: blueviolet;
+}
+
 
 .rangeslider-horizontal .rangeslider__handle:after {
 	display: none;
 }
 
-.rangeslider-horizontal .rangeslider__tooltip {
-	width: 80px;
-	background-color: #7BD47E;
+.rangeslider .rangeslider__handle-tooltip {
+	width: 100px;
+	background-color: blueviolet;
 }
 
-.rangeslider-horizontal .rangeslider__tooltip:after {
-	border-top-color: #7BD47E;
+.rangeslider .rangeslider__handle-tooltip:after {
+		border-top-color: blueviolet;
 }
+
 
 .rangeslider__labels {
 	top: -20px;
@@ -179,11 +189,13 @@ h3 {
 	font-family: 'SF Mono', Menlo, monospace;
 }
 
+
 .amount:after {
 	content: ' Varje dag/mån';
 	display: block;
 	font-size: .75rem;
 }
+
 
 .amount-music {
 	color: #1493BC;
@@ -229,3 +241,4 @@ h3 {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 }
+

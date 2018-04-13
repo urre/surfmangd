@@ -59,8 +59,9 @@ class Home extends Component {
     this.setState({
       surfmangd: value,
       horizontal: value
+    }, () => {
+      this.updateUrl()
     })
-
   }
 
   render() {
