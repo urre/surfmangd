@@ -147,18 +147,18 @@ h3 {
 	}
 }
 
-/* .rangeslider-horizontal .rangeslider__label-item[data-value="100"] { */
-	/* margin-left: -.7rem;
+.rangeslider__label[data-value="100"] {
+	margin-left: -.7rem;
 	width: 55px;
 }
 
-.rangeslider-horizontal .rangeslider__label-item[data-value="2"] {
+.rangeslider-horizontal .rangeslider__label[data-value="2"] {
 	margin-left: -.3rem;
 }
 
-.rangeslider-horizontal .rangeslider__label-item[data-value="5"] {
+.rangeslider__label[data-value="5"] {
 	margin-left: -.35rem;
-} */
+}
 
 .value {
 	font-size: 3rem;
