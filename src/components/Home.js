@@ -98,7 +98,7 @@ class Home extends Component {
           <h1>
             <Link to="/">Surfmängd</Link>
           </h1>
-          <p>Vad räcker min data till varje dag i en hel månad? *</p>
+          <p>Vad räcker min data till? *</p>
         </Box>
 
         <Box className='value' col={ 12 } lg={ 6 } sm={ 12 } p={ 3 }>
@@ -110,7 +110,7 @@ class Home extends Component {
         <h3>Justera surfmängd</h3>
 
           <Slider
-            min={0}
+            min={2}
             max={100}
             step={1}
             format={formatgb}
