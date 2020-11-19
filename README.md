@@ -8,7 +8,7 @@ A fuzzy Mobile Data Plan Usage Calculator. Drag the slider and get the estimated
 + [Reflexbox](http://jxnblk.com/reflexbox/)
 + [Rebass](http://jxnblk.com/rebass/)
 + Native system font stack with San Francisco and SF Mono
-+ Hosted on [Surge](https://surge.sh/)
++ Hosted on [Vercel](https://vercel.com/)
 
 ![](https://res.cloudinary.com/urre/image/upload/v1491320150/sufmangd-large_quwntn.png)
 
