@@ -78,7 +78,7 @@ class Home extends Component {
 
   render() {
 
-    let { surfmangd } = this.state
+    let { surfmangd } = this.state
     const formatgb = value => value + ' gb'
 
     const horizontalLabels = {
@@ -102,7 +102,7 @@ class Home extends Component {
         </Box>
 
         <Box className='value' col={ 12 } lg={ 6 } sm={ 12 } p={ 3 }>
-          { surfmangd }
+          { surfmangd }
         </Box>
 
         <Box className='sliderSection' col={ 12 } lg={ 12 } sm={ 12 } py={ 3 } px={2}>
@@ -114,7 +114,7 @@ class Home extends Component {
             max={100}
             step={1}
             format={formatgb}
-            value={ surfmangd }
+            value={ surfmangd }
             labels={horizontalLabels}
             orientation="horizontal"
             onChange={this.handleOnChange}
@@ -124,9 +124,9 @@ class Home extends Component {
           <Media gb={this.props.params.id} />
         </Box>
 
-        <Box col={ 12 }>
+        {/* <Box col={ 12 }>
           <Affiliates />
-        </Box>
+        </Box> */}
 
         <Footer />
 
